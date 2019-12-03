@@ -58,6 +58,7 @@ public class ActiveTestSuite extends TestSuite {
             try {
                 wait();
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
                 return; // ignore
             }
         }
